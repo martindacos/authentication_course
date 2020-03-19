@@ -1,27 +1,26 @@
 <template>
-  <div id="nav">
-    <router-link to="/">
-Home
-</router-link>
-
-    <template v-if="user">
-      <router-link to="dashboard">
-Dashboard
-</router-link>
-
-      <span class="nav-welcome">Hello, {{ user.name }}.</span>
-
-      <button type="button" class="logoutButton" @click="logout">
-Log out
-</button>
-    </template>
-
-    <template v-else>
-      <router-link to="authenticate" class="button">
-Login
-</router-link>
-    </template>
-  </div>
+   <div id="nav">
+      <router-link to="/">
+         Home
+      </router-link>
+      <router-link to="/ofertas">
+         Ofertas
+      </router-link>
+      <template v-if="user">
+         <router-link to="dashboard">
+            Dashboard
+         </router-link>
+         <span class="nav-welcome">Hello, {{ user.name }}.</span>
+         <button type="button" class="logoutButton" @click="logout">
+         Log out
+         </button>
+      </template>
+      <template v-else>
+         <router-link to="authenticate" class="button">
+            Login
+         </router-link>
+      </template>
+   </div>
 </template>
 
 <script>

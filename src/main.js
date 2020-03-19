@@ -10,7 +10,7 @@ new Vue({
   router,
   store,
   render: h => h(App),
-  created() {
+  created () {
     const userString = localStorage.getItem('user')
     if (userString) {
       const userData = JSON.parse(userString)

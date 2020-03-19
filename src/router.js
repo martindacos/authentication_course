@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Ofertas from './views/Ofertas.vue'
 import Dashboard from './views/Dashboard.vue'
 import Authenticate from './views/Authenticate.vue'
 
@@ -14,6 +15,11 @@ const router = new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/ofertas',
+      name: 'ofertas',
+      component: Ofertas
     },
     {
       path: '/dashboard',
@@ -30,7 +36,7 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   // redirect to login page if user is not logged in and trying to access a restricted page
-  const publicPages = ['/authenticate', '/']
+  const publicPages = ['/authenticate', '/', '/ofertas']
   const authRequired = !publicPages.includes(to.path)
   const loggedIn = localStorage.getItem('user')
 
