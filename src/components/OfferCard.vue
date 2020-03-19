@@ -1,7 +1,7 @@
 <template>
   <div class="offer-card">
-    <span>@{{ event.description }} on {{ event.createdAt }}</span>
     <h4>{{ event.name }}</h4>
+    <span>{{ event.description }} on {{ event.date }}</span>
   </div>
 </template>
 

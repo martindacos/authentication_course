@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Dashboard</h1>
-    <template v-if="events !== 'Loading events...'">
+    <template v-if="events !== 'Cargando ofertas...'">
       <OfferCard v-for="event in events" :key="event.id" :event="event" />
     </template>
   </div>
@@ -14,7 +14,7 @@ import OfferCard from '../components/OfferCard'
 export default {
   components: { OfferCard },
   data () {
-    return { events: 'Loading events...' }
+    return { events: 'Cargando ofertas...' }
   },
   created () {
     axios
