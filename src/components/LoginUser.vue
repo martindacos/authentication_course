@@ -1,9 +1,9 @@
 <template>
   <form @submit.prevent="login">
-    <label for="email">
-      Email:
+    <label for="username">
+      User:
     </label>
-    <input v-model="email" type="email" name="email" value>
+    <input v-model="username" name="username" value>
     <label for="password">
       Password:
     </label>
@@ -22,7 +22,7 @@ export default {
   name: 'LoginUser',
   data () {
     return {
-      email: '',
+      username: '',
       password: '',
       status: null
     }
@@ -31,7 +31,7 @@ export default {
     login () {
       this.$store
         .dispatch('login', {
-          email: this.email,
+          username: this.username,
           password: this.password
         })
         .then(() => { this.$router.push({ name: 'dashboard' }) })

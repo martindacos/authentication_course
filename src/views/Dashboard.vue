@@ -17,9 +17,12 @@ export default {
     return { events: 'Loading events...' }
   },
   created () {
-    axios.get('//localhost:3000/dashboard').then(({ data }) => {
-      this.events = data.events.events
-    })
+    axios
+      .get('//localhost:8082/offers/list')
+      .then(response => {
+        console.log(response)
+        this.events = response.data
+      })
   }
 }
 </script>
