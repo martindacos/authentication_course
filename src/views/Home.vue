@@ -4,22 +4,10 @@
     <template v-if="!this.$store.state.user">
       <div>
         To use the app, you'll need to
-        <router-link to="authenticate" @click.native="isNew(false)">
+        <router-link to="authenticate">
           Login
-        </router-link>
-        or
-        <router-link to="authenticate" @click.native="isNew(true)">
-          Register
         </router-link>
       </div>
     </template>
   </div>
 </template>
-
-<script>
-export default {
-  methods: {
-    isNew (isNewUser) { this.$store.dispatch('isNewUser', !isNewUser) }
-  }
-}
-</script>
