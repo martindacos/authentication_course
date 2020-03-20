@@ -2,17 +2,17 @@
   <div>
     <h1>Dashboard</h1>
     <template v-if="events !== 'Loading events...'">
-      <EventCard v-for="event in events" :key="event.id" :event="event" />
+      <OfferCard v-for="event in events" :key="event.id" :event="event" />
     </template>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import EventCard from '../components/EventCard'
+import OfferCard from '../components/OfferCard'
 
 export default {
-  components: { EventCard },
+  components: { OfferCard },
   data () {
     return { events: 'Loading events...' }
   },

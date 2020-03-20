@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Dashboard</h1>
+    <h1>Ofertas de Trabajo</h1>
     <template v-if="events !== 'Cargando ofertas...'">
       <OfferCard v-for="event in events" :key="event.id" :event="event" />
     </template>

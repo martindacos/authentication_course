@@ -10,7 +10,7 @@
          <router-link to="dashboard">
             Dashboard
          </router-link>
-         <span class="nav-welcome">Hello, {{ user.name }}.</span>
+         <span class="nav-welcome">Hola, {{ user.username }}</span>
          <button type="button" class="logoutButton" @click="logout">
          Log out
          </button>

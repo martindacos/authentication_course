@@ -1,8 +1,15 @@
 <template>
-  <div class="offer-card">
-    <h4>{{ event.name }}</h4>
-    <span>{{ event.description }} on {{ event.date }}</span>
-  </div>
+   <div class="offer-card">
+      <h4>{{ event.title }}</h4>
+      <div>
+         <p><b> Referencia: </b> {{event.reference}}</p>
+         <p><b> Zona: </b> {{event.zone}}</p>
+         <p><b> Requisitos Mínimos: </b> {{event.minimalRequirements}}</p>
+         <p><b> Requisitos Deseados: </b> {{event.desiredRequirements}}</p>
+         <p><b> Descripción: </b> {{event.description}}</p>
+         <p><b> Fecha: </b> {{event.date}}</p>
+      </div>
+   </div>
 </template>
 
 <script>
@@ -19,7 +26,7 @@ export default {
 
 <style scoped>
 .offer-card {
-  width: 13em;
+  width: 50%;
   margin: 1em auto 1em auto;
   padding: 1em;
   border: solid 1px #2c3e50;
